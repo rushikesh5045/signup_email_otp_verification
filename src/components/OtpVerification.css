@@ -1,0 +1,66 @@
+.otp-verification-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.otp-verification-container h2 {
+  text-align: center;
+  color: #3a244a;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.error-message {
+  color: #d72638;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button[type="submit"],
+.resend-link {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+  background-color: #3a244a;
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  background-color: #542c85;
+}
+
+.resend-link {
+  background-color: #fff;
+  border: 1px solid #3a244a;
+  color: #3a244a;
+  margin-top: 10px;
+}
+
+.resend-link:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: not-allowed;
+}
