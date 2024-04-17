@@ -54,13 +54,16 @@ function Signup() {
     event.preventDefault();
     if (validate()) {
       try {
-        const response = await fetch("http://localhost:3001/signup", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://signup-email-otp-verification.onrender.com/signup",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
         const data = await response.json();
         if (response.ok) {
           localStorage.setItem("contactValue", formData.contactValue);

@@ -22,13 +22,16 @@ function EmailOtpVerification() {
         return;
       }
 
-      const response = await fetch("http://localhost:3001/verify-otp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ contactValue, otp }),
-      });
+      const response = await fetch(
+        "https://signup-email-otp-verification.onrender.com/verify-otp",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ contactValue, otp }),
+        }
+      );
       const data = await response.json();
       if (response.ok) {
         console.log("OTP verified successfully!");
@@ -52,13 +55,16 @@ function EmailOtpVerification() {
         return;
       }
 
-      const response = await fetch("http://localhost:3001/resend-otp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ contactValue }),
-      });
+      const response = await fetch(
+        "https://signup-email-otp-verification.onrender.com/resend-otp",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ contactValue }),
+        }
+      );
       const data = await response.json();
       if (response.ok) {
         console.log("OTP resent successfully!");
